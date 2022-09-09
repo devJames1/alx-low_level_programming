@@ -1,2 +1,2 @@
 #!/bin/bash
-STORE=$(echo $CFILE | tr .c .o) && gcc -c $CFILE -o $STORE
+$(echo $CFILE | tr .c .o) && gcc -c $CFILE -o c
