@@ -11,7 +11,7 @@
  * Return: 0
  */
 
- int main(void)
+	int main(void)
 {
 	int n1 = 48;
 	int n2, n3;
