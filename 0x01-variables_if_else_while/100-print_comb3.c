@@ -16,7 +16,7 @@
 
 	for (d = 0; d < 90; d++)
 	{
-		for ()
+		for (d = 1; d < 10; d++)
 		{
 			putchar((d / 10) + '0');
 			putchar((d % 10) + '0');
