@@ -10,22 +10,27 @@
  * Return: 0
  */
 
-	int main(void)
+int main(void)
 {
-	int d;
+	int n1 = 48;
+	int n2;
+	int com = 44;
 
-	for (d = 0; d < 90; d++)
+	while (n1 <= 57)
 	{
-		for (d = 1; d < 10; d++)
-		{
-			putchar((d / 10) + '0');
-			putchar((d % 10) + '0');
-		}
-		if (d != 89)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		n2 = n1 + 1;
+	while (n2 <= 57)
+	{
+		putchar(n1);
+		putchar(n2);
+	if (n1 != 56 || n2 != 57)
+	{
+		putchar(com);
+		putchar(32);
+	}
+		n2 += 1;
+	}
+		n1 += 1;
 	}
 	putchar('\n');
 
