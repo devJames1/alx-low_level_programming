@@ -9,7 +9,7 @@
 int main (void)
 {
 	int n = 0;
-	char pc_str[] = "-putchar";
+	char pc_str[] = "_putchar";
 
 	while (n < 8)
 	{
