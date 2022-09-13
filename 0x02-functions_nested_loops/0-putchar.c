@@ -3,10 +3,10 @@
 /**
 * main - program prints _putchar
 *
-* return: Always 0 (success)
+* Return: Always 0 (Success)
 */
 
-int main (void)
+int main(void)
 {
 	int n = 0;
 	char pc_str[] = "_putchar";
