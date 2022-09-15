@@ -1,39 +1,31 @@
 #include <stdio.h>
 
 /**
-*main -  prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
-*Return: Always 0 (Success)
+* main - fizz bizz holterton style
+* Description: Uses headers to link and a nested loops to achieve goal
+* fizz buzz from 1-100. print fizz for multiples of 3 and buzz for
+* multiples of 5 and fizzbuzz for multiples of both eg. 15
+* could use a switch for neater and better code
+* Return: 0 if no errors
 */
 
 int main(void)
 {
-	int n = 1;
-	int d3, d5;
+	int i;
 
-	while (n < 100)
+	for (i = 1; i <= 100; i++)
 	{
-		d3 = n % 3;
-		d5 = n % 5;
-
-		if (d3 == 0 && d5 == 0)
-		{
-			printf("FizzBuzz ");
-		}
-		else if (d3 == 0)
-		{
-			printf("Fizz ");
-		}
-
-		else if (d5 == 0)
-		{
-			printf("Buzz ");
-		}
+		if (i % 3 == 0 && i % 5 == 0)
+			printf("FizzBuzz");
+		else if (i % 3 == 0)
+			printf("Fizz");
+		else if (i % 5 == 0)
+			printf("Buzz");
 		else
-		{
-			printf("%d ", n);
-		}
-		n++;
+			printf("%d", i);
+		if (i != 100)
+			printf(" ");
 	}
-	printf("Buzz\n");
+	printf("\n");
 	return (0);
 }
