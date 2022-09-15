@@ -7,28 +7,33 @@
 
 int main(void)
 {
-	int i;
+	int n = 1;
+	int d3, d5;
 
-	for (i = 1; i <= 100; i++)
+	while (n < 100)
 	{
-		if (i % 3 == 0 && i % 5 != 0)
-		{
-			printf(" Fizz");
-		} else if (i % 5 == 0 && i % 3 != 0)
-		{
-			printf(" Buzz");
-		} else if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf(" FizzBuzz");
-		} else if (i == 1)
-		{
-			printf("%d", i);
-		} else
-		{
-			printf(" %d", i);
-		}
-	}
-	printf("\n");
+		d3 = n % 3;
+		d5 = n % 5;
 
+		if (d3 == 0 && d5 == 0)
+		{
+			printf("FizzBuzz ");
+		}
+		else if (d3 == 0)
+		{
+			printf("Fizz ");
+		}
+
+		else if (d5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", n);
+		}
+		n++;
+	}
+	printf("Buzz\n");
 	return (0);
 }
