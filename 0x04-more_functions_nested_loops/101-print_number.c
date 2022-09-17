@@ -1,68 +1,26 @@
-#include "main.h"
-#include <limits.h>
+#include"main.h"
 
 /**
- * print_number - takes an integer and prints it with _putchar
- * @n: integer to print
+ * print_number - Prints an integer.
  *
- * Return: void
- */
+ * @n: The integer to be printed.
+*/
+
 void print_number(int n)
 {
-	int x = n;
-	int digit;
-	int places = 1000000000;
+	unsigned int num = n;
 
-	if (n < 0)/* E */
+	/*first check if its negative*/
+	if (n < 0)
 	{
-		x = -n;
 		_putchar('-');
+		num = -num;
 	}
-	if (n == INT_MAX || n == INT_MIN) /* D */
-	{
-		while (1)
-		{
-			if (n == INT_MAX)
-			{
-				_putchar('2');
-				_putchar('1');
-				_putchar('4');
-				_putchar('7');
-				_putchar('4');
-				_putchar('8');
-				_putchar('3');
-				_putchar('6');
-				_putchar('4');
-				_putchar('7');
-				break;
-			}
-			else if (n == INT_MIN)
-			{
-				_putchar('2');
-				_putchar('1');
-				_putchar('4');
-				_putchar('7');
-				_putchar('4');
-				_putchar('8');
-				_putchar('3');
-				_putchar('6');
-				_putchar('4');
-				_putchar('8');
-				break;
-			}
-		}
-	}
-	else if (n == 0)/* A */
-		_putchar('0');
-	else
-	{
-		while (places > x)/* B */
-			places /= 10;
-		while (places > 0)
-		{
-			digit = x / places;/* C */
-			_putchar((digit % 10) + '0');
-			places /= 10;
-		}
-	}
+
+	/*print the first few digits*/
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	/*print the last digit*/
+	_putchar((num % 10) + 48);
 }
