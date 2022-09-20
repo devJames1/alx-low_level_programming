@@ -11,7 +11,7 @@
 void rev_string(char *s)
 {
 	int l = _strlen(s);
-	int cntr = l / 2 ;
+	int cntr = l / 2;
 	int cnt = 0;
 	char ltemp;
 
