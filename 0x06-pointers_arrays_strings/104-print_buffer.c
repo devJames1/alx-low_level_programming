@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -8,8 +8,6 @@
  *
  * Return: void
  */
-
-void print_byte(char *c, int s, int l);
 
 void print_buffer(char *b, int size)
 {
